@@ -1,48 +1,13 @@
-CLASS zcl_171422010_global_01 DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_171422010_GLOBAL_01 definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_171422010_global_01 IMPLEMENTATION.
-
-
-  METHOD if_oo_adt_classrun~main.
-
-    DATA connection TYPE REF TO lcl_connection.
-    DATA connections TYPE TABLE OF REF TO lcl_connection.
-
-
-    connection = NEW #( ).
-
-    connection->carrier_id = 'LH'.
-    connection->connection_id = '0400'.
-
-    APPEND connection TO connections.
-
-
-
-    connection = NEW #(  ).
-
-    connection->carrier_id = 'AA'.
-    connection->connection_id = '0017'.
-
-    APPEND connection TO connections.
-
-
-    connection = NEW #(  ).
-
-    connection->carrier_id = 'SQ'.
-    connection->connection_id = '0001'.
-
-    APPEND connection TO connections.
-  ENDMETHOD.
+CLASS ZCL_171422010_GLOBAL_01 IMPLEMENTATION.
 ENDCLASS.
